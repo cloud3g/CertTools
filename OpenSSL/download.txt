@@ -1,0 +1,11 @@
+http://slproweb.com/products/Win32OpenSSL.html
+
+
+http://slproweb.com/download/Win64OpenSSL-1_1_1a.exe        #64 1_1_1a
+http://slproweb.com/download/Win32OpenSSL-1_1_1a.exe        #32 1_1_1a
+http://slproweb.com/download/Win64OpenSSL_Light-1_1_1a.exe  #64 Light-1_1_1a
+
+
+http://slproweb.com/download/Win64OpenSSL-1_1_0j.exe        #64 1_1_0j
+http://slproweb.com/download/Win32OpenSSL-1_1_0j.exe        #32 1_1_0j
+http://slproweb.com/download/Win64OpenSSL_Light-1_1_0j.exe  #64 Light-1_1_0j

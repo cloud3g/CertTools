@@ -1,0 +1,1 @@
+运行 CertificateCreator.exe， 然后输入Common Name（比如Test）、密码、保存路径（比如D:\server.pfx）

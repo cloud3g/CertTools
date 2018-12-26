@@ -1,0 +1,39 @@
+########
+#生成server.key
+openssl genrsa -out server.key 2048
+
+#生成server.csr
+openssl req -new -key server.key -out server.csr
+
+#生成server.crt
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+#生成server.PFX
+openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt
+########
+
+
+########
+#生成server.key
+openssl genrsa -out server.key 2048
+
+#生成server.cer
+openssl req -new -x509 -key server.key -out server.cer -days 365 -subj /CN=www.ssl.com
+
+#生成server.pfx
+openssl pkcs12 -export -out server.pfx -inkey server.key -in server.cer
+########
+
+
+#PFX转换为PEM/KEY/CRT
+openssl pkcs12 -in server.pfx -nodes -out server.pem
+openssl rsa -in server.pem -out server.key
+openssl x509 -in server.pem -out server.crt
+
+
+
+#PFX 格式证书转换为JKS
+keytool -importkeystore -srckeystore D:\server.pfx -destkeystore D:\server.jks -srcstoretype PKCS12 -deststoretype JKS
+
+#将JKS格式证书转换成PFX格式
+keytool -importkeystore -srckeystore D:\server.jks -destkeystore D:\server.pfx -srcstoretype JKS -deststoretype PKCS12
